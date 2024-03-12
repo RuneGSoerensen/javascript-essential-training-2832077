@@ -19,7 +19,17 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+
+  newPocketNum: function (pocketNumNew) {
+    this.pocketNum = pocketNumNew;
+  },
 };
 
 console.log("The backpack object:", backpack);
 console.log("The pocketNum value:", backpack.pocketNum);
+
+console.log("pocketNum before", backpack.pocketNum);
+
+backpack.newPocketNum(`this is now a string and a data: ${backpack.pocketNum}`);
+
+console.log("pocketNum after", backpack.pocketNum);

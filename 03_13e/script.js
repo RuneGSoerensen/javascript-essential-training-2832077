@@ -3,19 +3,42 @@
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
  */
 
-import Backpack from "./Backpack.js";
+import Car from "./Car.js";
 
-const everydayPack = new Backpack(
-  "Everyday Backpack",
-  30,
-  "grey",
-  15,
-  26,
-  26,
+const thisCar = new Car(
+  "Hyandai",
+  "Classic",
+  2013,
+  "black",
+  68000,
+  4,
   false,
-  "December 5, 2018 15:00:00 PST"
+  false,
+  false,
+  "December 5, 2022 15:00:00 PST"
 );
 
-console.log("The everydayPack object:", everydayPack);
-console.log("The pocketNum value:", everydayPack.pocketNum);
-console.log("Days since aquired:", everydayPack.backpackAge());
+console.log(thisCar);
+
+console.log("The cars millage:", thisCar.mileage);
+console.log("Days since aquired:", thisCar.carAge());
+
+console.log("Car engine is:", thisCar.engineOn);
+
+thisCar.toggleEngine(true);
+
+console.log("Car engine is:", thisCar.engineOn);
+
+console.log(
+  "Front doors are: ",
+  thisCar.frontDoors.left,
+  thisCar.frontDoors.right
+);
+
+thisCar.newDoorStatus(true, false);
+
+console.log(
+  "Front doors are: ",
+  thisCar.frontDoors.left,
+  thisCar.frontDoors.right
+);

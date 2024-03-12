@@ -11,8 +11,15 @@ const everydayPack = new Backpack(
   15,
   26,
   26,
-  false
+  false,
+  true
 );
 
 console.log("The everydayPack object:", everydayPack);
 console.log("The pocketNum value:", everydayPack.pocketNum);
+
+console.log("The current open status", everydayPack.lidOpen);
+
+everydayPack.toggleLid(true);
+
+console.log("The new open status", everydayPack.lidOpen);
